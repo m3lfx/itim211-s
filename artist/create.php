@@ -3,7 +3,7 @@ include('../includes/header.php');
 ?>
 <body>
     <div class="container-fluid">
-        <form action="store.php" method="POST" >
+        <form action="store.php" method="POST" enctype="multipart/form-data" >
             <div class="form-group">
                 <label for="artistName">Artist name</label>
                 <input type="text" class="form-control" id="artistName" aria-describedby="emailHelp" placeholder="Enter name"
