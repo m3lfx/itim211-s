@@ -20,7 +20,9 @@
  <option>ORAC AI</option>
  <option>HAL 2000</option>
  </select> -->
- 
+ <?php
+print_r($_SERVER);
+ ?>
   <input type="checkbox" name="products[]" value="Sonic Screwdriver" />Sonic Screwdriver<br/>
 <input type="checkbox" name="products[]" value="Tricorder" />Tricorder<br/>
 <input type="checkbox" name="products[]" value="ORAC AI" />ORAC AI<br/>
