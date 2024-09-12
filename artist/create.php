@@ -2,7 +2,8 @@
 include('../includes/header.php');
 ?>
 <body>
-    <div class="container-fluid">
+
+    <div class="container-fluid container-lg">
         <form action="store.php" method="POST" enctype="multipart/form-data" >
             <div class="form-group">
                 <label for="artistName">Artist name</label>
