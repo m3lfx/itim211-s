@@ -8,9 +8,9 @@ if (! isset($_POST['guess'])) {
 } else if ($_POST['guess'] < $num_to_guess) {
     $message = $_POST['guess'] . " is too small! Try a larger number";
 } else { // must be equivalent
-    $message = "Well done!";
-    // header("Location: congrats.html");
-    // exit;
+    // $message = "Well done!";
+    header("Location: congrats.html");
+    exit;
 }
 $guess = (int) $_POST['guess'];
 $num_tries = (int) $_POST['num_tries'];
