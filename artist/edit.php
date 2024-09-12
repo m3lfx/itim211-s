@@ -33,7 +33,8 @@ print $row['country'];
             </div>
 
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+            <a href="index.php" class="btn btn-secondary btn-sm " role="button" aria-disabled="true">Cancel</a>
         </form>
     </div>
 </body>
