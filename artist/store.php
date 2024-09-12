@@ -17,7 +17,7 @@ if (isset($_FILES['image'])) {
 
         $source = $_FILES['image']['tmp_name'];
         $target = "../uploads/" . $_FILES['image']['name'];
-        $path = "uploads/" . $_FILES['image']['name'];
+        $path = "../uploads/" . $_FILES['image']['name'];
         move_uploaded_file($source, $target) or die("Couldn't copy");
         $size = getImageSize($target);
 
