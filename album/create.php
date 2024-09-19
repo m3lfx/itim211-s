@@ -9,7 +9,7 @@ $result = mysqli_query($conn, $sql);
 <body>
 
     <div class="container-fluid container-lg">
-        <form action="store.php" method="POST" enctype="multipart/form-data">
+        <form action="store.php" method="POST" >
             <div class="form-group">
                 <label for="title">Album title</label>
                 <input type="text" class="form-control" id="artistName" aria-describedby="emailHelp" placeholder="Enter name"
