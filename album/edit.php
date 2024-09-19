@@ -21,7 +21,7 @@ $artists = mysqli_query($conn, $sql2);
         <form action="update.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="albumId">album id</label>
-                <input type="text" class="form-control" id="albumId" name="title" value=<?php print "{$row['album_id']} ;" ?> readonly disabled />
+                <input type="text" class="form-control" id="albumId" name="album_id" value=<?php print "{$row['album_id']} ;" ?> readonly  />
 
             </div>
 
