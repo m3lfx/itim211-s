@@ -4,7 +4,6 @@ $artist_id = (int) $_POST['artistId'];
 $name = trim($_POST['artistName']);
 $country = trim($_POST['country']);
 
-
 if (isset($_FILES['image'])) {
 
     print "name: " .     $_FILES['image']['name']       . "<br />";
