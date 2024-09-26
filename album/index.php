@@ -4,7 +4,8 @@ require("../includes/config.php");
 ?>
 
 <body>
-    <h1>artists</h1>
+    <h1>albums</h1>
+    <a class="btn btn-primary" href="create.php" role="button">add album</a>
     <table class='table table-striped'>
         <thead>
             <tr>
@@ -23,7 +24,7 @@ require("../includes/config.php");
 
             $result = mysqli_query($conn, $sql);
             while ($row = mysqli_fetch_assoc($result)) {
-           
+
                 echo "<tr>
                         <td>{$row['album id']}</td>
                         <td>{$row['title']}</td>
