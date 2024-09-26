@@ -18,17 +18,17 @@ if (isset($_POST['submit'])) {
         $_SESSION['user_id'] = $row['user_id'];
         header("Location: profile.php");
     } else {
-        echo "<p>wrong</p>";
+        $_SESSION['message'] = 'wrong email or password';
     }
 }
-// if (isset($_SESSION['message'])) {
-//     // var_dump($_SESSION);
-//     echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
-//     <strong>{$_SESSION['message']}</strong>
-//     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
-//     unset($_SESSION['message']);
+if (isset($_SESSION['message'])) {
+    // var_dump($_SESSION);
+    echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
+    <strong>{$_SESSION['message']}</strong>
+    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
+    unset($_SESSION['message']);
     
-// }
+}
 ?>
 <div class="row col-md-8 mx-auto ">
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
