@@ -1,5 +1,10 @@
 <?php
+session_start();
+print_r($_SESSION);
 include('../includes/header.php');
+if(isset($_SESSION['user_id'])){
+    header("Location: ../user/login.php");
+}
 ?>
 <body>
 

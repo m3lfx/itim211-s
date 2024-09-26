@@ -1,7 +1,11 @@
 <?php
 // print $_GET['id'];
+session_start();
 include('../includes/header.php');
 require('../includes/config.php');
+if(! isset($_SESSION['user_id'])){
+    header("Location: ../user/login.php");
+}
 $artist_id = (int) $_GET['id'];
 
 $sql = "SELECT * FROM artists WHERE artist_id = $artist_id LIMIT 1";
