@@ -3,6 +3,7 @@
 
 include("../includes/header.php");
 include("../includes/config.php");
+print_r($_SESSION);
 if (isset($_POST['submit'])) {
     // var_dump($_POST);
     $email = trim($_POST['email']);
@@ -23,14 +24,15 @@ if (isset($_POST['submit'])) {
 }
 if (isset($_SESSION['message'])) {
     // var_dump($_SESSION);
-    echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
+    $error = "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
     <strong>{$_SESSION['message']}</strong>
     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
-    unset($_SESSION['message']);
+    // unset($_SESSION['message']);
     
 }
 ?>
 <div class="row col-md-8 mx-auto ">
+    <?php echo $error; unset($_SESSION['message']);  ?>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <!-- Email input -->
         <div class="form-outline mb-4">
